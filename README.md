@@ -13,7 +13,7 @@
 - **Servidor de Aplicaciones:** Payara 
 - **Base de Datos:** MariaDB / MySQL
 
-### 🔹 .NET (opcional / comparativo)
+### 🔹 .NET
 - **Lenguaje:** C#  
 - **Base de Datos:** SQL Serve
 
