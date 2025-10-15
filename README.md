@@ -23,13 +23,13 @@
 
 Cada proyecto debe organizarse en carpetas con la siguiente estructura:
 
-📁 01.SERVIDOR → Servicios y Web Service
-📁 02.CLICON → Cliente Consola
-📁 02.CLIESC → Cliente Escritorio
-📁 02.CLIMOV → Cliente Móvil
-📁 02.CLIWEB → Cliente Web
-📁 03.BDD → Scripts y modelos de base de datos
-📁 04.DOCUMENTACION → Mini ERS, Historias de Usuario, UML y documentación general
+📁 **01.SERVIDOR** → Servicios y Web Service  
+📁 **02.CLICON** → Cliente Consola  
+📁 **02.CLIESC** → Cliente Escritorio  
+📁 **02.CLIMOV** → Cliente Móvil  
+📁 **02.CLIWEB** → Cliente Web  
+📁 **03.BDD** → Scripts y modelos de base de datos  
+📁 **04.DOCUMENTACION** → Mini ERS, Historias de Usuario, UML y documentación general
 
 ## 🧮 Sistema de Evaluación
 
