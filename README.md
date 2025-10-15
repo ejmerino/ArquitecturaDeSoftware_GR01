@@ -5,14 +5,6 @@
 - **Josué Merino**
 - **Diego Páez**
 
----
-
-## 📚 Información General
-
-Este repositorio contiene el desarrollo del **Proyecto de Arquitectura de Software** correspondiente al período **202551**.  
-El proyecto aplica conceptos como **Mini ERS**, **Historias de Usuario**, **Tarjetas CRC**, **MVC** y **Diagramas UML (incluyendo Diagrama de Secuencia)**.
-
----
 
 ## ⚙️ Tecnologías Utilizadas
 
