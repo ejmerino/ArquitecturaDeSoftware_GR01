@@ -1,71 +1,193 @@
-// Devuelve el nombre del parámetro para cada método
-function getParamName(tipo) {
-  switch(tipo) {
-    // Longitud
-    case "metros_a_kilometros": return "metros";
-    case "kilometros_a_metros": return "kilometros";
-    case "centimetros_a_metros": return "centimetros";
-    // Masa
-    case "gramos_a_kilogramos": return "gramos";
-    case "kilogramos_a_gramos": return "kilogramos";
-    case "libras_a_kilogramos": return "libras";
-    // Temperatura
-    case "celsius_a_fahrenheit":
-    case "celsius_a_kelvin": return "celsius";
-    case "fahrenheit_a_celsius": return "fahrenheit";
-    default: return "valor";
-  }
+// =====================================================================
+// === Configuración y Elementos DOM ===
+// =====================================================================
+const SOAP_URL = "http://localhost:3000/soap-proxy"; // Apunta al proxy de Express
+const NAMESPACE = "http://service.monster.edu.ec/";
+
+// Elementos del login
+const loginContainer = document.getElementById('login-container');
+const usernameInput = document.getElementById('username');
+const passwordInput = document.getElementById('password');
+const loginErrorMessageElement = document.getElementById('login-error-message');
+
+// Elementos del conversor
+const converterApp = document.getElementById('converter-app');
+const soapErrorMessageElement = document.getElementById('soap-error-message');
+
+// Credenciales quemadas
+const VALID_USERNAME = "MONSTER";
+const VALID_PASSWORD = "MONSTER9";
+
+// Mapa de conversiones disponibles en el servicio SOAP
+const CONVERSION_MAP = {
+    temp: {
+        'celsius_kelvin': { method: 'celsius_a_kelvin', param: 'celsius' },
+        'celsius_fahrenheit': { method: 'celsius_a_fahrenheit', param: 'celsius' },
+        'fahrenheit_celsius': { method: 'fahrenheit_a_celsius', param: 'fahrenheit' }
+    },
+    length: {
+        'centimetros_metros': { method: 'centimetros_a_metros', param: 'centimetros' },
+        'metros_kilometros': { method: 'metros_a_kilometros', param: 'metros' },
+        'kilometros_metros': { method: 'kilometros_a_metros', param: 'kilometros' }
+    },
+    mass: {
+        'kilogramos_gramos': { method: 'kilogramos_a_gramos', param: 'kilogramos' },
+        'gramos_kilogramos': { method: 'gramos_a_kilogramos', param: 'gramos' },
+        'libras_kilogramos': { method: 'libras_a_kilogramos', param: 'libras' }
+    }
+};
+
+// =====================================================================
+// === Funciones de UI y Mensajes (CORREGIDAS) ===
+// =====================================================================
+
+function showElement(element) {
+    element.classList.remove('hidden');
 }
 
-document.getElementById("convertir").addEventListener("click", () => {
-  const tipo = document.getElementById("tipo").value;
-  const valor = document.getElementById("valor").value;
-  const resultadoDiv = document.getElementById("resultado");
+function hideElement(element) {
+    element.classList.add('hidden');
+}
 
-  if (!valor) {
-    resultadoDiv.textContent = "⚠️ Ingrese un valor para convertir.";
-    return;
-  }
-
-  const url = "http://localhost:8080/WS_ConvUni_SOAPJAVA_GR01/ConversorUnidadesService";
-  const param = getParamName(tipo);
-
-  // Envelope SOAP correcto con prefijo ser:
-  const xml = `<?xml version="1.0" encoding="utf-8"?>
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.monster.edu.ec/">
-  <soapenv:Header/>
-  <soapenv:Body>
-    <ser:${tipo}>
-      <${param}>${valor}</${param}>
-    </ser:${tipo}>
-  </soapenv:Body>
-</soapenv:Envelope>`;
-
-  fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "text/xml; charset=utf-8",
-      "SOAPAction": ""
-    },
-    body: xml
-  })
-  .then(response => response.text())
-  .then(text => {
-    const parser = new DOMParser();
-    const xmlDoc = parser.parseFromString(text, "text/xml");
-
-    // Aquí leemos directamente el <return> de la respuesta
-    const value = xmlDoc.getElementsByTagName("return")[0]?.textContent;
-
-    if (value !== undefined) {
-      resultadoDiv.textContent = `Resultado: ${value}`;
+function displayMessage(element, message) {
+    element.textContent = message;
+    if (element.classList.contains('validation-message')) {
+        element.style.display = 'block';
     } else {
-      resultadoDiv.textContent = "❌ Error: no se recibió respuesta válida del servidor.";
-      console.error("Respuesta SOAP completa:", text);
+        showElement(element);
     }
-  })
-  .catch(err => {
-    resultadoDiv.textContent = "❌ Error al conectar con el servidor SOAP.";
-    console.error(err);
-  });
-});
+}
+
+function clearMessage(element) {
+    element.textContent = '';
+    if (element.classList.contains('validation-message')) {
+        element.style.display = 'none';
+    } else {
+        hideElement(element);
+    }
+}
+
+// =====================================================================
+// === Lógica de Autenticación ===
+// =====================================================================
+
+function handleLogin() {
+    clearMessage(loginErrorMessageElement);
+    if (usernameInput.value === VALID_USERNAME && passwordInput.value === VALID_PASSWORD) {
+        sessionStorage.setItem('isLoggedIn', 'true');
+        renderApp();
+    } else {
+        displayMessage(loginErrorMessageElement, "Usuario o contraseña incorrectos.");
+    }
+}
+
+function handleLogout() {
+    sessionStorage.removeItem('isLoggedIn');
+    renderApp();
+}
+
+function renderApp() {
+    const isLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
+    if (isLoggedIn) {
+        hideElement(loginContainer);
+        showElement(converterApp);
+        document.body.style.alignItems = 'flex-start'; // Ajustar para que el conversor se vea bien
+        clearMessage(loginErrorMessageElement);
+        clearMessage(soapErrorMessageElement);
+        ['temp', 'length', 'mass'].forEach(validateConversion);
+    } else {
+        showElement(loginContainer);
+        hideElement(converterApp);
+        document.body.style.alignItems = 'center'; // Centrar el login
+        usernameInput.value = '';
+        passwordInput.value = '';
+        clearMessage(loginErrorMessageElement);
+    }
+}
+
+// =====================================================================
+// === Lógica del Cliente SOAP ===
+// =====================================================================
+async function callSoapService(methodName, parameterName, parameterValue) {
+    clearMessage(soapErrorMessageElement);
+    const soapRequest = `<?xml version="1.0" encoding="UTF-8"?>
+        <S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+            <SOAP-ENV:Header/><S:Body>
+                <ns2:${methodName} xmlns:ns2="${NAMESPACE}"><${parameterName}>${parameterValue}</${parameterName}></ns2:${methodName}>
+            </S:Body></S:Envelope>`;
+    try {
+        const response = await fetch(SOAP_URL, { method: 'POST', headers: { 'Content-Type': 'text/xml; charset=utf-8', 'SOAPAction': `${NAMESPACE}${methodName}` }, body: soapRequest, mode: 'cors' });
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}.`);
+        const responseText = await response.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(responseText, "text/xml");
+        const resultNode = xmlDoc.querySelector(`${methodName}Response return`) || xmlDoc.querySelector('return');
+        if (resultNode) return parseFloat(resultNode.textContent);
+        throw new Error("No se encontró el resultado en la respuesta SOAP.");
+    } catch (error) {
+        console.error("Error al llamar al servicio SOAP:", error);
+        displayMessage(soapErrorMessageElement, `Problema de conexión con el servicio. Detalles: ${error.message}`);
+        return null;
+    }
+}
+
+// =====================================================================
+// === Lógica de Validación y Conversión ===
+// =====================================================================
+function validateConversion(category) {
+    const unitFrom = document.getElementById(`${category}UnitFrom`).value;
+    const unitTo = document.getElementById(`${category}UnitTo`).value;
+    const convertBtn = document.getElementById(`${category}ConvertBtn`);
+    const validationMessageElement = document.getElementById(`${category}ValidationMessage`);
+    const resultElement = document.getElementById(`${category}Result`);
+    clearMessage(validationMessageElement);
+    resultElement.textContent = '--';
+    if (unitFrom === unitTo) {
+        convertBtn.disabled = false;
+        return true;
+    }
+    const conversionKey = `${unitFrom}_${unitTo}`;
+    if (CONVERSION_MAP[category]?.[conversionKey]) {
+        convertBtn.disabled = false;
+        return true;
+    } else {
+        convertBtn.disabled = true;
+        displayMessage(validationMessageElement, `Conversión de ${unitFrom} a ${unitTo} no disponible.`);
+        return false;
+    }
+}
+
+async function performConversion(category) {
+    const valueInput = document.getElementById(`${category}Value`);
+    const unitFrom = document.getElementById(`${category}UnitFrom`).value;
+    const unitTo = document.getElementById(`${category}UnitTo`).value;
+    const resultElement = document.getElementById(`${category}Result`);
+    resultElement.textContent = '--';
+    const value = parseFloat(valueInput.value);
+    if (isNaN(value)) {
+        displayMessage(soapErrorMessageElement, "Por favor, introduce un número válido.");
+        return;
+    }
+    if (!validateConversion(category)) return;
+    if (unitFrom === unitTo) {
+        resultElement.textContent = value.toFixed(3);
+        clearMessage(soapErrorMessageElement);
+        return;
+    }
+    const conversionInfo = CONVERSION_MAP[category][`${unitFrom}_${unitTo}`];
+    if (conversionInfo) {
+        const result = await callSoapService(conversionInfo.method, conversionInfo.param, value);
+        if (result !== null) {
+            resultElement.textContent = result.toFixed(3);
+        } else {
+            resultElement.textContent = 'Error';
+        }
+    }
+}
+function convertTemperature() { performConversion('temp'); }
+function convertLength() { performConversion('length'); }
+function convertMass() { performConversion('mass'); }
+// =====================================================================
+// === Inicialización ===
+// =====================================================================
+document.addEventListener('DOMContentLoaded', renderApp);

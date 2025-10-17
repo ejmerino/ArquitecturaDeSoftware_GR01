@@ -1,36 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Conversor de Unidades SOAP</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Unidades | Monsters Inc.</title>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Conversor de Unidades</h1>
+    <!-- Sección de Login -->
+    <div id="login-container" class="container login-container">
+        <img src="monstersinc.jpg" alt="Monsters Inc. Logo" class="login-logo">
+        <h1>Bienvenido al Conversor</h1>
+        <p class="login-subtitle">Por favor, inicia sesión para continuar</p>
+        <div class="input-group">
+            <input type="text" id="username" placeholder="Usuario">
+        </div>
+        <div class="input-group">
+            <input type="password" id="password" placeholder="Contraseña">
+        </div>
+        <button onclick="handleLogin()">Entrar</button>
+        <p id="login-error-message" class="error-message"></p>
+    </div>
 
-  <label for="tipo">Tipo de conversión:</label>
-  <select id="tipo">
-    <!-- Longitud -->
-    <option value="metros_a_kilometros">Metros → Kilómetros</option>
-    <option value="kilometros_a_metros">Kilómetros → Metros</option>
-    <option value="centimetros_a_metros">Centímetros → Metros</option>
-    <!-- Masa -->
-    <option value="gramos_a_kilogramos">Gramos → Kilogramos</option>
-    <option value="kilogramos_a_gramos">Kilogramos → Gramos</option>
-    <option value="libras_a_kilogramos">Libras → Kilogramos</option>
-    <!-- Temperatura -->
-    <option value="celsius_a_fahrenheit">Celsius → Fahrenheit</option>
-    <option value="fahrenheit_a_celsius">Fahrenheit → Celsius</option>
-    <option value="celsius_a_kelvin">Celsius → Kelvin</option>
-  </select>
+    <!-- Sección del Conversor de Unidades (oculta por defecto) -->
+    <div id="converter-app" class="container converter-app hidden">
+        <header class="header-app">
+            <div class="header-title-group">
+                <img src="monstersinc.jpg" alt="Header Logo" class="header-logo">
+                <h1>Conversor de Unidades</h1>
+            </div>
+            <button class="logout-button" onclick="handleLogout()">Cerrar Sesión</button>
+        </header>
+        
+        <main class="converter-main">
+            <div class="converter-card">
+                <h2>Temperatura</h2>
+                <div class="converter-input-row">
+                    <input type="number" id="tempValue" placeholder="Valor" value="0">
+                    <select id="tempUnitFrom" onchange="validateConversion('temp')">
+                        <option value="celsius">Celsius</option>
+                        <option value="fahrenheit">Fahrenheit</option>
+                        <option value="kelvin">Kelvin</option>
+                    </select>
+                    <span>→</span>
+                    <select id="tempUnitTo" onchange="validateConversion('temp')">
+                        <option value="fahrenheit">Fahrenheit</option>
+                        <option value="celsius">Celsius</option>
+                        <option value="kelvin">Kelvin</option>
+                    </select>
+                    <button id="tempConvertBtn" onclick="convertTemperature()">Convertir</button>
+                </div>
+                <p id="tempValidationMessage" class="validation-message"></p>
+                <p class="result-container">Resultado: <span id="tempResult" class="result-value">--</span></p>
+            </div>
 
-  <label for="valor">Valor:</label>
-  <input type="number" id="valor" placeholder="Ingrese valor">
+            <div class="converter-card">
+                <h2>Longitud</h2>
+                <div class="converter-input-row">
+                    <input type="number" id="lengthValue" placeholder="Valor" value="0">
+                    <select id="lengthUnitFrom" onchange="validateConversion('length')">
+                        <option value="centimetros">Centímetros</option>
+                        <option value="metros">Metros</option>
+                        <option value="kilometros">Kilómetros</option>
+                    </select>
+                    <span>→</span>
+                    <select id="lengthUnitTo" onchange="validateConversion('length')">
+                        <option value="metros">Metros</option>
+                        <option value="centimetros">Centímetros</option>
+                        <option value="kilometros">Kilómetros</option>
+                    </select>
+                    <button id="lengthConvertBtn" onclick="convertLength()">Convertir</button>
+                </div>
+                <p id="lengthValidationMessage" class="validation-message"></p>
+                <p class="result-container">Resultado: <span id="lengthResult" class="result-value">--</span></p>
+            </div>
 
-  <button id="convertir">Convertir</button>
+            <div class="converter-card">
+                <h2>Masa</h2>
+                <div class="converter-input-row">
+                    <input type="number" id="massValue" placeholder="Valor" value="0">
+                    <select id="massUnitFrom" onchange="validateConversion('mass')">
+                        <option value="kilogramos">Kilogramos</option>
+                        <option value="gramos">Gramos</option>
+                        <option value="libras">Libras</option>
+                    </select>
+                    <span>→</span>
+                    <select id="massUnitTo" onchange="validateConversion('mass')">
+                        <option value="gramos">Gramos</option>
+                        <option value="kilogramos">Kilogramos</option>
+                        <option value="libras">Libras</option>
+                    </select>
+                    <button id="massConvertBtn" onclick="convertMass()">Convertir</button>
+                </div>
+                <p id="massValidationMessage" class="validation-message"></p>
+                <p class="result-container">Resultado: <span id="massResult" class="result-value">--</span></p>
+            </div>
+            
+            <p id="soap-error-message" class="error-message"></p>
+        </main>
+    </div>
 
-  <div id="resultado"></div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

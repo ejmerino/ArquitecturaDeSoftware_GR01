@@ -1,0 +1,243 @@
+:root {
+    --primary-color: #00aaff;
+    --primary-hover: #0088cc;
+    --success-color: #50c878;
+    --warning-color: #ffc107;
+    --error-color: #e74c3c;
+    --dark-text: #34495e;
+    --light-text: #ffffff;
+    --border-color: rgba(255, 255, 255, 0.2);
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* IMAGEN DE FONDO APLICADA A TODA LA PÁGINA */
+    background-image: linear-gradient(rgba(10, 25, 47, 0.6), rgba(10, 25, 47, 0.6)), url('monstersinc2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Mantiene el fondo estático al hacer scroll */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.container {
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    transition: opacity 0.5s ease;
+    
+    /* Efecto de vidrio para todos los contenedores principales */
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* --- LOGIN SCREEN --- */
+.login-container {
+    max-width: 420px;
+    color: var(--light-text);
+}
+.login-logo {
+    max-width: 150px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    border: 4px solid var(--primary-color);
+}
+.login-container h1 {
+    color: var(--light-text);
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.login-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+.input-group input, .input-group select {
+    background: rgba(0, 0, 0, 0.2);
+    border-color: var(--border-color);
+    color: var(--light-text);
+}
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* --- CONVERTER APP --- */
+.converter-app {
+    max-width: 900px;
+    color: var(--light-text);
+}
+.header-app {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+.header-title-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.header-app h1 {
+    margin: 0;
+    font-size: 1.6em;
+}
+.header-logo {
+    height: 45px;
+    border-radius: 8px;
+    background-color: rgba(255,255,255,0.1);
+    padding: 5px;
+}
+.converter-main {
+    padding-top: 10px;
+}
+
+/* --- TARJETAS DE CONVERSIÓN (ahora sin efecto de vidrio, ya que el contenedor principal lo tiene) --- */
+.converter-card {
+    background: rgba(0, 0, 0, 0.15); /* Un poco más oscuro para contrastar */
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    margin-bottom: 25px;
+}
+.converter-card h2 {
+    color: var(--light-text);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+/* --- ELEMENTOS DE FORMULARIO MÁS GRANDES Y LEGIBLES --- */
+.converter-input-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.converter-input-row > * {
+    flex: 1;
+}
+
+/* Aumento de tamaño para inputs y selects */
+.converter-input-row input[type="number"],
+.converter-input-row select {
+    min-height: 50px; /* Altura mínima para que sean fáciles de tocar */
+    font-size: 1.2rem; /* Tamaño de fuente más grande */
+    padding: 0 15px; /* Padding horizontal */
+    font-family: 'Poppins', sans-serif;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+    color: var(--light-text);
+    width: 150px; /* Ancho mínimo */
+    box-sizing: border-box; /* Importante para el cálculo del tamaño */
+    transition: all 0.2s ease;
+}
+
+.converter-input-row select option {
+    background: var(--dark-bg);
+}
+
+.converter-input-row input:focus, .converter-input-row select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 170, 255, 0.4);
+}
+
+.converter-input-row button {
+    min-width: 140px;
+    margin: 0;
+    min-height: 50px; /* Misma altura que los inputs */
+    font-size: 1.1rem; /* Tamaño de fuente del botón */
+}
+.converter-input-row span {
+    font-size: 2em; /* Flecha más grande */
+    font-weight: 700;
+    color: var(--light-text);
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+/* --- BOTONES Y MENSAJES (con pequeños ajustes) --- */
+button {
+    padding: 12px 25px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.2s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+button:hover:not(:disabled) {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 170, 255, 0.3);
+}
+button:disabled {
+    background-color: #555;
+    color: #999;
+    cursor: not-allowed;
+}
+.logout-button {
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid var(--border-color);
+    width: auto; margin-top: 0; font-size: 14px; padding: 8px 15px;
+}
+.logout-button:hover:not(:disabled) {
+    background-color: rgba(255,255,255,0.2);
+    box-shadow: none;
+}
+.error-message, .validation-message {
+    font-weight: 600; padding: 12px; border-radius: 8px; display: none;
+}
+.error-message {
+    color: #fff; border: 1px solid var(--error-color); background-color: rgba(231, 76, 60, 0.5);
+    margin-top: 20px;
+}
+.validation-message {
+    color: var(--warning-color); font-size: 0.9em; padding: 0; text-align: left;
+    margin-top: 5px; margin-bottom: 0;
+}
+.result-container {
+    font-size: 1.2em; margin-top: 20px; margin-bottom: 0;
+}
+span.result-value {
+    font-weight: 700; color: var(--success-color); font-size: 1.4em;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 800px) {
+    .converter-input-row { flex-direction: column; align-items: stretch; gap: 10px; }
+    .converter-input-row span { transform: rotate(90deg); margin: 10px 0; }
+}
+@media (max-width: 480px) {
+    body { padding: 10px; }
+    .container { padding: 20px; }
+    .header-app { flex-direction: column; align-items: stretch; gap: 15px; }
+    .header-title-group { justify-content: space-between; }
+}
