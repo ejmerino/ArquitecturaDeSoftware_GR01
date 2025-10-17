@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Conversor de Unidades SOAP</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>🌡️ Conversor de Unidades</h1>
+  <h1>Conversor de Unidades</h1>
 
-    <label for="tipo">Selecciona tipo de conversión:</label>
-    <select id="tipo">
-      <option value="metros_a_kilometros">Metros → Kilómetros</option>
-      <option value="kilometros_a_metros">Kilómetros → Metros</option>
-      <option value="centimetros_a_metros">Centímetros → Metros</option>
-      <option value="celsius_a_fahrenheit">Celsius → Fahrenheit</option>
-      <option value="fahrenheit_a_celsius">Fahrenheit → Celsius</option>
-      <option value="celsius_a_kelvin">Celsius → Kelvin</option>
-      <option value="gramos_a_kilogramos">Gramos → Kilogramos</option>
-      <option value="kilogramos_a_gramos">Kilogramos → Gramos</option>
-      <option value="libras_a_kilogramos">Libras → Kilogramos</option>
-    </select>
+  <label for="tipo">Tipo de conversión:</label>
+  <select id="tipo">
+    <!-- Longitud -->
+    <option value="metros_a_kilometros">Metros → Kilómetros</option>
+    <option value="kilometros_a_metros">Kilómetros → Metros</option>
+    <option value="centimetros_a_metros">Centímetros → Metros</option>
+    <!-- Masa -->
+    <option value="gramos_a_kilogramos">Gramos → Kilogramos</option>
+    <option value="kilogramos_a_gramos">Kilogramos → Gramos</option>
+    <option value="libras_a_kilogramos">Libras → Kilogramos</option>
+    <!-- Temperatura -->
+    <option value="celsius_a_fahrenheit">Celsius → Fahrenheit</option>
+    <option value="fahrenheit_a_celsius">Fahrenheit → Celsius</option>
+    <option value="celsius_a_kelvin">Celsius → Kelvin</option>
+  </select>
 
-    <label for="valor">Valor a convertir:</label>
-    <input type="number" id="valor" placeholder="Ingrese el valor" />
+  <label for="valor">Valor:</label>
+  <input type="number" id="valor" placeholder="Ingrese valor">
 
-    <button id="convertir">Convertir</button>
+  <button id="convertir">Convertir</button>
 
-    <div id="resultado" class="resultado"></div>
-  </div>
+  <div id="resultado"></div>
 
   <script src="script.js"></script>
 </body>
