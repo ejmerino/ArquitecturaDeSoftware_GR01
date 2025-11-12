@@ -1,0 +1,85 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ClienteWebEurekabank
+build_property.RootNamespace = ClienteWebEurekabank
+build_property.ProjectDir = C:\Users\marly\Downloads\EUREKABANK_REST_DOTNET_G4\02. CLIENTEWEB\ClienteWebEurekabank\ClienteWebEurekabank\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\marly\Downloads\EUREKABANK_REST_DOTNET_G4\02. CLIENTEWEB\ClienteWebEurekabank\ClienteWebEurekabank
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/marly/Downloads/EUREKABANK_REST_DOTNET_G4/02. CLIENTEWEB/ClienteWebEurekabank/ClienteWebEurekabank/Views/Cuentas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VlbnRhc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marly/Downloads/EUREKABANK_REST_DOTNET_G4/02. CLIENTEWEB/ClienteWebEurekabank/ClienteWebEurekabank/Views/Deposito/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwb3NpdG9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marly/Downloads/EUREKABANK_REST_DOTNET_G4/02. CLIENTEWEB/ClienteWebEurekabank/ClienteWebEurekabank/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marly/Downloads/EUREKABANK_REST_DOTNET_G4/02. CLIENTEWEB/ClienteWebEurekabank/ClienteWebEurekabank/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marly/Downloads/EUREKABANK_REST_DOTNET_G4/02. CLIENTEWEB/ClienteWebEurekabank/ClienteWebEurekabank/Views/Home/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marly/Downloads/EUREKABANK_REST_DOTNET_G4/02. CLIENTEWEB/ClienteWebEurekabank/ClienteWebEurekabank/Views/Menu/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marly/Downloads/EUREKABANK_REST_DOTNET_G4/02. CLIENTEWEB/ClienteWebEurekabank/ClienteWebEurekabank/Views/Movimientos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aW1pZW50b3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marly/Downloads/EUREKABANK_REST_DOTNET_G4/02. CLIENTEWEB/ClienteWebEurekabank/ClienteWebEurekabank/Views/Retiro/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV0aXJvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marly/Downloads/EUREKABANK_REST_DOTNET_G4/02. CLIENTEWEB/ClienteWebEurekabank/ClienteWebEurekabank/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marly/Downloads/EUREKABANK_REST_DOTNET_G4/02. CLIENTEWEB/ClienteWebEurekabank/ClienteWebEurekabank/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marly/Downloads/EUREKABANK_REST_DOTNET_G4/02. CLIENTEWEB/ClienteWebEurekabank/ClienteWebEurekabank/Views/Transferencias/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJlbmNpYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marly/Downloads/EUREKABANK_REST_DOTNET_G4/02. CLIENTEWEB/ClienteWebEurekabank/ClienteWebEurekabank/Views/Usuarios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marly/Downloads/EUREKABANK_REST_DOTNET_G4/02. CLIENTEWEB/ClienteWebEurekabank/ClienteWebEurekabank/Views/Usuarios/Usuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcVXN1YXJpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marly/Downloads/EUREKABANK_REST_DOTNET_G4/02. CLIENTEWEB/ClienteWebEurekabank/ClienteWebEurekabank/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marly/Downloads/EUREKABANK_REST_DOTNET_G4/02. CLIENTEWEB/ClienteWebEurekabank/ClienteWebEurekabank/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marly/Downloads/EUREKABANK_REST_DOTNET_G4/02. CLIENTEWEB/ClienteWebEurekabank/ClienteWebEurekabank/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ctx5h332cn

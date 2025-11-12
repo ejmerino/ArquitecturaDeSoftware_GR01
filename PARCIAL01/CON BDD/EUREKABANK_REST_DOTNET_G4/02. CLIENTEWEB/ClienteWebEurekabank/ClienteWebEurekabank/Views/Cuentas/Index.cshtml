@@ -1,0 +1,163 @@
+﻿@model IEnumerable<ClienteWebEurekabank.Models.Cuenta>
+
+@{
+    ViewData["Title"] = "Cuentas";
+}
+
+<style>
+    :root {
+        --azul: #0033A0;
+        --azul-osc: #001f66;
+        --amarillo: #FFD700;
+        --gris: #f9fafc;
+    }
+
+    body {
+        background-color: var(--gris);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h2 {
+        color: var(--azul);
+        text-align: center;
+        font-weight: 700;
+        margin-top: 30px;
+    }
+
+    .search-box {
+        display: flex;
+        justify-content: center;
+        margin: 25px auto;
+        gap: 10px;
+    }
+
+    .search-box input {
+        width: 300px;
+        border: 2px solid var(--azul);
+        border-radius: 6px;
+        padding: 8px 12px;
+    }
+
+    .search-box button {
+        background-color: var(--azul);
+        border: 2px solid var(--amarillo);
+        color: var(--amarillo);
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+    }
+
+    .search-box button:hover {
+        background-color: var(--azul-osc);
+        color: #fff;
+    }
+
+    .table-container {
+        margin: 0 auto;
+        max-width: 900px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    .table th {
+        background-color: var(--azul);
+        color: white;
+        text-align: center;
+    }
+
+    .table td {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .btn-back {
+        background-color: var(--azul);
+        color: var(--amarillo);
+        border: 2px solid var(--amarillo);
+        font-weight: 600;
+        padding: 10px 20px;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: 0.3s;
+        display: inline-block;
+        margin-top: 25px;
+    }
+
+    .btn-back:hover {
+        background-color: var(--azul-osc);
+        color: #fff;
+    }
+
+    .alert {
+        max-width: 800px;
+        margin: 20px auto;
+    }
+</style>
+
+<h2>🏦 Consulta de Cuentas</h2>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger text-center">
+        @ViewBag.ErrorMessage
+    </div>
+}
+
+<form method="get" action="@Url.Action("Index", "Cuentas")" class="search-box">
+    <input type="text" id="numeroCuenta" name="numeroCuenta" value="@ViewBag.NumeroCuenta" placeholder="Buscar por número de cuenta..." />
+    <button type="submit">Buscar</button>
+</form>
+
+<div class="table-container">
+    @if (Model != null && Model.Any())
+    {
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Cliente</th>
+                    <th>Número</th>
+                    <th>Tipo</th>
+                    <th>Saldo (USD)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var cuenta in Model)
+                {
+                    <tr>
+                        <td>@cuenta.CuId</td>
+                        <td>@cuenta.CliId</td>
+                        <td>@cuenta.CuNumero</td>
+                        <td>@cuenta.CuTipo</td>
+                        <td>
+                            @{
+                                // ✅ Aseguramos formato correcto del saldo sin errores de conversión
+                                if (decimal.TryParse(Convert.ToString(cuenta.CuSaldo), out var saldo))
+                                {
+                                    @saldo.ToString("N2")
+                                }
+                                else
+                                {
+                                    @("—") <!-- Muestra guion si no es numérico -->
+                                }
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <div class="alert alert-info text-center">
+            No se encontraron cuentas registradas.
+        </div>
+    }
+</div>
+
+<div class="text-center">
+    <a class="btn-back" href="@Url.Action("Index", "Menu")">⬅️ Volver al Menú</a>
+</div>

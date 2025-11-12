@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "Menú Principal";
+}
+
+<style>
+    .menu-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #f9f9f9; /* Fondo gris claro */
+        color: #333; /* Texto gris oscuro */
+        border: 1px solid #ccc; /* Contorno gris claro */
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .welcome-image {
+        max-width: 50%; /* Tamaño máximo de la imagen */
+        height: auto; /* Mantiene la proporción original de la imagen */
+        border-radius: 10px; /* Bordes redondeados para la imagen */
+    }
+
+    .button-container {
+        text-align: right;
+        flex: 1;
+        margin-left: 20px; /* Espacio entre imagen y botones */
+    }
+
+    .btn-custom {
+        background-color: #007bff; /* Azul claro */
+        border: none;
+        color: #fff; /* Texto blanco */
+        font-weight: normal;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-transform: uppercase;
+        margin: 5px; /* Espacio entre botones */
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+        .btn-custom:hover {
+            background-color: #0056b3; /* Azul más oscuro para el hover */
+            color: #fff; /* Texto blanco al hacer hover */
+        }
+
+    .btn-secondary {
+        background-color: #6c757d; /* Color de fondo gris para el botón de cerrar sesión */
+        border: none; /* Sin borde */
+        color: #fff; /* Texto blanco */
+        font-weight: normal;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        margin-left: 20px; /* Espacio a la izquierda del botón de cerrar sesión */
+    }
+
+        .btn-secondary:hover {
+            background-color: #5a6268; /* Gris más oscuro para el hover */
+            color: #fff; /* Texto blanco al hacer hover */
+        }
+</style>
+
+<div class="menu-container">
+    <img src="~/images/welcome.png" alt="Bienvenida" class="welcome-image" />
+
+    <div class="button-container">
+        <a class="btn btn-custom" href="@Url.Action("Index", "Movimientos")">Movimientos</a>
+        <a class="btn btn-custom" href="@Url.Action("Index", "Cuentas")">Cuentas</a>
+        <a class="btn btn-custom" href="@Url.Action("Index", "Transferencias")">Transferencias</a>
+        <!-- Nuevos botones añadidos -->
+        <a class="btn btn-custom" href="@Url.Action("Index", "Usuarios")">Información Usuarios</a>
+    </div>
+
+    <form method="post" action="@Url.Action("Logout", "Home")" style="margin-left: 20px;">
+        <button type="submit" class="btn btn-secondary">Cerrar sesión</button>
+    </form>
+</div>

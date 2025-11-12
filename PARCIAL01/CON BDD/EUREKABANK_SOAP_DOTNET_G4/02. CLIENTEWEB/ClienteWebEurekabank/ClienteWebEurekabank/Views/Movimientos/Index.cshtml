@@ -1,0 +1,52 @@
+﻿@model IEnumerable<ClienteWebEurekabank.Models.Movimiento>
+
+@{
+    ViewData["Title"] = "Movimientos";
+}
+
+<h1>Movimientos</h1>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.ErrorMessage
+    </div>
+}
+
+<form method="get" action="@Url.Action("Index", "Movimientos")">
+    <div class="form-group">
+        <label for="numeroCuenta">Número de Cuenta:</label>
+        <input type="text" class="form-control" id="numeroCuenta" name="numeroCuenta" value="@ViewBag.NumeroCuenta" />
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
+
+<br />
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Cuenta ID</th>
+            <th>Fecha</th>
+            <th>Tipo</th>
+            <th>Valor</th>
+            <th>Saldo Final</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var movimiento in Model)
+        {
+            <tr>
+                <td>@movimiento.MovId</td>
+                <td>@movimiento.CuId</td>
+                <td>@movimiento.MovFecha</td>
+                <td>@movimiento.MovTipo</td>
+                <td>@movimiento.MovValor</td>
+                <td>@movimiento.MovSaldoFinal</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a class="btn btn-primary" href="@Url.Action("Index", "Menu")">Regresar</a>

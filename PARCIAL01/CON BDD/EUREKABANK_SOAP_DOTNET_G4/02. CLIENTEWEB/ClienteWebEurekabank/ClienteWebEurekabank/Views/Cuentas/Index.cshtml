@@ -1,0 +1,50 @@
+﻿@model IEnumerable<ClienteWebEurekabank.Models.Cuenta>
+
+@{
+    ViewData["Title"] = "Cuentas";
+}
+
+<h1>Cuentas</h1>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.ErrorMessage
+    </div>
+}
+
+<form method="get" action="@Url.Action("Index", "Cuentas")">
+    <div class="form-group">
+        <label for="numeroCuenta">Número de Cuenta:</label>
+        <input type="text" class="form-control" id="numeroCuenta" name="numeroCuenta" value="@ViewBag.NumeroCuenta" />
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
+
+<br />
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Cliente ID</th>
+            <th>Número de Cuenta</th>
+            <th>Tipo</th>
+            <th>Saldo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cuenta in Model)
+        {
+            <tr>
+                <td>@cuenta.CuId</td>
+                <td>@cuenta.CliId</td>
+                <td>@cuenta.CuNumero</td>
+                <td>@cuenta.CuTipo</td>
+                <td>@cuenta.CuSaldo</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a class="btn btn-primary" href="@Url.Action("Index", "Menu")">Regresar</a>

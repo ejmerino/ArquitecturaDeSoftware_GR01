@@ -1,0 +1,77 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Eurekabank_Dotnet RestFul_G6, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/EurekabankControlador/Movimientos": {
+      "get": {
+        "tags": [
+          "EurekabankControlador"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "numeroCuenta",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EurekabankControlador/Cuentas": {
+      "get": {
+        "tags": [
+          "EurekabankControlador"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "numeroCuenta",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EurekabankControlador/Transferencia": {
+      "post": {
+        "tags": [
+          "EurekabankControlador"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "cuentaOrigen",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "cuentaDestino",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "valor",
+            "type": "number",
+            "format": "float"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}

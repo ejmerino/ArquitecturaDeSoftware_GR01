@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Eurekabank_Dotnet RestFul_G4.props" />
+</Project>
