@@ -1,9 +1,93 @@
-/* Estilos mínimos de login */
-body { font-family: Arial, sans-serif; background:#eef2f7; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; }
-.login-card { width: 360px; background:#fff; border-radius:12px; padding:1.5rem; box-shadow:0 10px 30px rgba(0,0,0,.08); }
-h2 { margin-top:0; color:#4b0082; text-align:center; }
-input, button { width:100%; padding:.6rem; margin:.35rem 0; border-radius:8px; border:1px solid #cfd6e4; }
-button { background:#4b0082; color:#fff; font-weight:bold; border:none; }
-button:hover { background:#5c14a2; }
-.small { color:#666; font-size:.85rem; text-align:center; }
-.logo { display:block; margin:0 auto 1rem auto; max-width:140px; }
+/* Estilos modernos - Login EurekaBank */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(135deg, #4b0082, #8a2be2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  color: #333;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+}
+
+.login-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.login-card:hover {
+  transform: translateY(-5px);
+}
+
+.logo {
+  width: 90px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(75, 0, 130, 0.2);
+}
+
+.title {
+  color: #4b0082;
+  margin-bottom: 0.2rem;
+}
+
+.subtitle {
+  color: #6a1bb8;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.4rem 0;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  transition: all 0.2s;
+  font-size: 1rem;
+}
+
+input:focus {
+  border-color: #8a2be2;
+  background: #fff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(138, 43, 226, 0.3);
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #4b0082, #8a2be2);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.8rem;
+  transition: all 0.25s;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #5d14a2, #a246f2);
+}
+
+.small {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 1.2rem;
+}

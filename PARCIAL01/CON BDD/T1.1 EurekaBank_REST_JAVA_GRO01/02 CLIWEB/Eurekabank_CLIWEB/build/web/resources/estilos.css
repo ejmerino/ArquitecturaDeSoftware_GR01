@@ -1,11 +1,122 @@
-/* Estilos generales para eurekabank.html */
-* { box-sizing: border-box; }
-body { font-family: Arial, sans-serif; background:#f8f8f8; margin:2rem; color:#333; }
-h1 { color:#4b0082; text-align:center; margin-bottom:2rem; }
-.card { background:#fff; border-radius:10px; padding:1rem 1.5rem; margin-bottom:1.5rem;
-        box-shadow:0 2px 6px rgba(0,0,0,.1); }
-input, button { padding:.5rem; margin:.25rem; border-radius:5px; border:1px solid #ccc; }
-button { background:#4b0082; color:#fff; cursor:pointer; }
-button:hover { background:#5c14a2; }
-table { width:100%; border-collapse:collapse; margin-top:.5rem; }
-th, td { padding:.5rem; border:1px solid #ddd; }
+/* ===== Estilos generales para eurekabank.html ===== */
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #ece9f1, #f7f7fa);
+  color: #333;
+  margin: 2rem auto;
+  max-width: 1000px;
+  padding: 0 1rem;
+}
+
+/* ===== Títulos ===== */
+h1 {
+  color: #4b0082;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 2px rgba(75, 0, 130, 0.1);
+}
+
+/* ===== Tarjetas ===== */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Formularios ===== */
+input,
+button {
+  padding: 0.6rem 0.9rem;
+  margin: 0.3rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+input:focus {
+  border-color: #4b0082;
+  outline: none;
+  box-shadow: 0 0 4px rgba(75, 0, 130, 0.3);
+}
+
+/* ===== Botones ===== */
+button {
+  background: #4b0082;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: #5c14a2;
+  transform: scale(1.03);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* ===== Tablas ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+th {
+  background: #4b0082;
+  color: #fff;
+  text-align: left;
+  padding: 0.8rem;
+  font-weight: 600;
+}
+
+td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+tr:nth-child(even) td {
+  background: #faf7ff;
+}
+
+tr:hover td {
+  background: #f1e9ff;
+}
+
+/* ===== Pequeños detalles ===== */
+.card-title {
+  font-size: 1.2rem;
+  color: #4b0082;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+label {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-weight: 500;
+  color: #444;
+}

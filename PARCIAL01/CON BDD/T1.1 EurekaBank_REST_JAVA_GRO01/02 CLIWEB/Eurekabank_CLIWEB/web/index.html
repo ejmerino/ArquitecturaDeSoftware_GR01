@@ -2,20 +2,27 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>EurekaBank - Login</title>
+  <title>EurekaBank - Ingreso</title>
   <link rel="stylesheet" href="resources/loginEstilos.css" />
   <script defer src="js/login.js"></script>
 </head>
+
 <body>
-  <div class="login-card">
-    <img class="logo" src="resources/monster.jpeg" alt="Logo" />
-    <h2>Ingreso</h2>
-    <form id="frmLogin">
-      <input id="usuario" placeholder="Usuario" />
-      <input id="clave" type="password" placeholder="Contraseña" />
-      <button type="submit">Entrar</button>
-    </form>
-    <p class="small">Demo — cualquier usuario/clave accede.</p>
+  <div class="login-container">
+    <div class="login-card">
+      <img class="logo" src="resources/monster.jpeg" alt="Logo" />
+      <h1 class="title">EurekaBank</h1>
+      <h2 class="subtitle">Inicio de Sesión</h2>
+
+      <!-- Formulario con submit (no cambia IDs usados por tu JS) -->
+      <form id="frmLogin">
+        <input id="usuario" name="usuario" placeholder="Usuario" autocomplete="off" />
+        <input id="clave" name="clave" type="password" placeholder="Contraseña" />
+        <button type="submit">Entrar</button>
+      </form>
+
+      <p class="small">© 2025 EurekaBank • Seguridad y confianza digital</p>
+    </div>
   </div>
 </body>
 </html>
