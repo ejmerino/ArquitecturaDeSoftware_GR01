@@ -1,0 +1,9 @@
+/* Estilos mínimos de login */
+body { font-family: Arial, sans-serif; background:#eef2f7; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; }
+.login-card { width: 360px; background:#fff; border-radius:12px; padding:1.5rem; box-shadow:0 10px 30px rgba(0,0,0,.08); }
+h2 { margin-top:0; color:#4b0082; text-align:center; }
+input, button { width:100%; padding:.6rem; margin:.35rem 0; border-radius:8px; border:1px solid #cfd6e4; }
+button { background:#4b0082; color:#fff; font-weight:bold; border:none; }
+button:hover { background:#5c14a2; }
+.small { color:#666; font-size:.85rem; text-align:center; }
+.logo { display:block; margin:0 auto 1rem auto; max-width:140px; }
