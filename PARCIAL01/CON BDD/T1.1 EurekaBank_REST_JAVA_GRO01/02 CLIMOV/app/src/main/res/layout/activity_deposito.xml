@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/fondo2"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="16dp"
+        android:layout_marginHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/lblTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_deposito"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#212121"
+            android:gravity="center"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Campo cuenta -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cuenta_label"
+            android:textColor="#212121"
+            android:layout_marginTop="4dp" />
+
+        <EditText
+            android:id="@+id/txtCuenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_cuenta"
+            android:inputType="text"
+            android:autofillHints="username"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:textColor="#212121"
+            android:layout_marginTop="4dp" />
+
+        <!-- Campo importe -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/importe_label"
+            android:textColor="#212121"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/txtImporte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_importe"
+            android:inputType="numberDecimal"
+            android:autofillHints="creditCardExpirationDay"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:textColor="#212121"
+            android:layout_marginTop="4dp" />
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_depositar"
+            android:minHeight="48dp"
+            android:layout_marginTop="12dp" />
+    </LinearLayout>
+</ScrollView>

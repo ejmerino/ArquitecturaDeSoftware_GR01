@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">EurekaBank_RestJava</string>
+
+    <!-- Transferencia -->
+    <string name="titulo_transferencia">Transferencia</string>
+    <string name="cuenta_origen">Cuenta Origen</string>
+    <string name="cuenta_destino">Cuenta Destino</string>
+    <string name="importe">Importe</string>
+    <string name="hint_cuenta">Ingrese número de cuenta</string>
+    <string name="hint_importe">Ingrese importe</string>
+    <string name="btn_transferir">Transferir</string>
+    <string name="titulo_deposito">Depósito</string>
+    <string name="cuenta_label">Cuenta</string>
+    <string name="importe_label">Importe</string>
+    <string name="btn_depositar">Depositar</string>
+    <string name="titulo_login">EurekaBank — Ingreso</string>
+    <string name="usuario_label">Usuario</string>
+    <string name="usuario_hint">Ingrese su usuario</string>
+    <string name="contrasena_label">Contraseña</string>
+    <string name="contrasena_hint">Ingrese su contraseña</string>
+    <string name="btn_entrar">Entrar</string>
+    <string name="titulo_retiro">Retiro</string>
+
+    <string name="btn_retirar">Retirar</string>
+</resources>

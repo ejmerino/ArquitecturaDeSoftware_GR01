@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Usa AppCompat clásico para evitar fallos de tema -->
+    <style name="Theme.EurekaBank" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/md_bg</item>
+        <item name="colorPrimary">@color/md_primary</item>
+        <item name="android:textColorPrimary">#212121</item>
+    </style>
+</resources>

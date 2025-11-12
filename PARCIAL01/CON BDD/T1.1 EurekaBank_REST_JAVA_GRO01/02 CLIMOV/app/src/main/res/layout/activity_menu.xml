@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/fondo2"
+    android:fillViewport="true" android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="16dp" android:layout_marginHorizontal="16dp">
+
+        <TextView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Menú Principal" android:textStyle="bold" android:textSize="20sp"
+            android:gravity="center" android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnMovimientos" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="CONSULTAR MOVIMIENTOS" />
+
+        <Button
+            android:id="@+id/btnDeposito" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="DEPÓSITO"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/btnRetiro" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="RETIRO"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/btnTransferencia" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="TRANSFERENCIA"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/btnSalir" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="SALIR"
+            android:layout_marginTop="12dp" />
+    </LinearLayout>
+</ScrollView>
