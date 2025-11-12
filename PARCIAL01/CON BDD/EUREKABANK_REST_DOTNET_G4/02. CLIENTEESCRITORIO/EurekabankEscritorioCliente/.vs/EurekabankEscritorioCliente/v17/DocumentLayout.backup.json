@@ -1,0 +1,166 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C19754-F1E3-4779-A4EB-6774B2E2763B}|EurekabankEscritorioCliente\\EurekabankEscritorioCliente.csproj|c:\\users\\marly\\downloads\\eurekabank_rest_dotnet_g4\\02. clienteescritorio\\eurekabankescritoriocliente\\eurekabankescritoriocliente\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C19754-F1E3-4779-A4EB-6774B2E2763B}|EurekabankEscritorioCliente\\EurekabankEscritorioCliente.csproj|solutionrelative:eurekabankescritoriocliente\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C19754-F1E3-4779-A4EB-6774B2E2763B}|EurekabankEscritorioCliente\\EurekabankEscritorioCliente.csproj|c:\\users\\marly\\downloads\\eurekabank_rest_dotnet_g4\\02. clienteescritorio\\eurekabankescritoriocliente\\eurekabankescritoriocliente\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C19754-F1E3-4779-A4EB-6774B2E2763B}|EurekabankEscritorioCliente\\EurekabankEscritorioCliente.csproj|solutionrelative:eurekabankescritoriocliente\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C19754-F1E3-4779-A4EB-6774B2E2763B}|EurekabankEscritorioCliente\\EurekabankEscritorioCliente.csproj|c:\\users\\marly\\downloads\\eurekabank_rest_dotnet_g4\\02. clienteescritorio\\eurekabankescritoriocliente\\eurekabankescritoriocliente\\models\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C19754-F1E3-4779-A4EB-6774B2E2763B}|EurekabankEscritorioCliente\\EurekabankEscritorioCliente.csproj|solutionrelative:eurekabankescritoriocliente\\models\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C19754-F1E3-4779-A4EB-6774B2E2763B}|EurekabankEscritorioCliente\\EurekabankEscritorioCliente.csproj|C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\eurekabankescritoriocliente\\transferenciasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C19754-F1E3-4779-A4EB-6774B2E2763B}|EurekabankEscritorioCliente\\EurekabankEscritorioCliente.csproj|solutionrelative:eurekabankescritoriocliente\\transferenciasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C19754-F1E3-4779-A4EB-6774B2E2763B}|EurekabankEscritorioCliente\\EurekabankEscritorioCliente.csproj|C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\eurekabankescritoriocliente\\transferenciasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D3C19754-F1E3-4779-A4EB-6774B2E2763B}|EurekabankEscritorioCliente\\EurekabankEscritorioCliente.csproj|solutionrelative:eurekabankescritoriocliente\\transferenciasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C19754-F1E3-4779-A4EB-6774B2E2763B}|EurekabankEscritorioCliente\\EurekabankEscritorioCliente.csproj|C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\eurekabankescritoriocliente\\cuentasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C19754-F1E3-4779-A4EB-6774B2E2763B}|EurekabankEscritorioCliente\\EurekabankEscritorioCliente.csproj|solutionrelative:eurekabankescritoriocliente\\cuentasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C19754-F1E3-4779-A4EB-6774B2E2763B}|EurekabankEscritorioCliente\\EurekabankEscritorioCliente.csproj|C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\eurekabankescritoriocliente\\movimientosform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C19754-F1E3-4779-A4EB-6774B2E2763B}|EurekabankEscritorioCliente\\EurekabankEscritorioCliente.csproj|solutionrelative:eurekabankescritoriocliente\\movimientosform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C19754-F1E3-4779-A4EB-6774B2E2763B}|EurekabankEscritorioCliente\\EurekabankEscritorioCliente.csproj|C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\eurekabankescritoriocliente\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C19754-F1E3-4779-A4EB-6774B2E2763B}|EurekabankEscritorioCliente\\EurekabankEscritorioCliente.csproj|solutionrelative:eurekabankescritoriocliente\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C19754-F1E3-4779-A4EB-6774B2E2763B}|EurekabankEscritorioCliente\\EurekabankEscritorioCliente.csproj|C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\eurekabankescritoriocliente\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C19754-F1E3-4779-A4EB-6774B2E2763B}|EurekabankEscritorioCliente\\EurekabankEscritorioCliente.csproj|solutionrelative:eurekabankescritoriocliente\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\EurekabankEscritorioCliente\\Models\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "EurekabankEscritorioCliente\\Models\\ApiResponse.cs",
+              "ToolTip": "C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\EurekabankEscritorioCliente\\Models\\ApiResponse.cs",
+              "RelativeToolTip": "EurekabankEscritorioCliente\\Models\\ApiResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T01:11:40.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\EurekabankEscritorioCliente\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "EurekabankEscritorioCliente\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\EurekabankEscritorioCliente\\Models\\Usuario.cs",
+              "RelativeToolTip": "EurekabankEscritorioCliente\\Models\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T01:11:34.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\EurekabankEscritorioCliente\\Program.cs",
+              "RelativeDocumentMoniker": "EurekabankEscritorioCliente\\Program.cs",
+              "ToolTip": "C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\EurekabankEscritorioCliente\\Program.cs",
+              "RelativeToolTip": "EurekabankEscritorioCliente\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T05:36:47.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TransferenciasForm.cs",
+              "DocumentMoniker": "C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\EurekabankEscritorioCliente\\TransferenciasForm.cs",
+              "RelativeDocumentMoniker": "EurekabankEscritorioCliente\\TransferenciasForm.cs",
+              "ToolTip": "C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\EurekabankEscritorioCliente\\TransferenciasForm.cs",
+              "RelativeToolTip": "EurekabankEscritorioCliente\\TransferenciasForm.cs",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAQwHsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T05:36:36.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TransferenciasForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\EurekabankEscritorioCliente\\TransferenciasForm.cs",
+              "RelativeDocumentMoniker": "EurekabankEscritorioCliente\\TransferenciasForm.cs",
+              "ToolTip": "C:\\Users\\pauls\\OneDrive\\Escritorio\\EUREKABANK_REST_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\EurekabankEscritorioCliente\\TransferenciasForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\pauls\\OneDrive\\Escritorio\\EUREKABANK_REST_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\EurekabankEscritorioCliente\\TransferenciasForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T05:36:33.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CuentasForm.cs",
+              "DocumentMoniker": "C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\EurekabankEscritorioCliente\\CuentasForm.cs",
+              "RelativeDocumentMoniker": "EurekabankEscritorioCliente\\CuentasForm.cs",
+              "ToolTip": "C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\EurekabankEscritorioCliente\\CuentasForm.cs",
+              "RelativeToolTip": "EurekabankEscritorioCliente\\CuentasForm.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAgwEEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T05:36:06.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MovimientosForm.cs",
+              "DocumentMoniker": "C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\EurekabankEscritorioCliente\\MovimientosForm.cs",
+              "RelativeDocumentMoniker": "EurekabankEscritorioCliente\\MovimientosForm.cs",
+              "ToolTip": "C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\EurekabankEscritorioCliente\\MovimientosForm.cs",
+              "RelativeToolTip": "EurekabankEscritorioCliente\\MovimientosForm.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAgwEEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T05:35:47.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MenuForm.cs",
+              "DocumentMoniker": "C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\EurekabankEscritorioCliente\\MenuForm.cs",
+              "RelativeDocumentMoniker": "EurekabankEscritorioCliente\\MenuForm.cs",
+              "ToolTip": "C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\EurekabankEscritorioCliente\\MenuForm.cs",
+              "RelativeToolTip": "EurekabankEscritorioCliente\\MenuForm.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAAC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T05:35:28.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\EurekabankEscritorioCliente\\LoginForm.cs",
+              "RelativeDocumentMoniker": "EurekabankEscritorioCliente\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\marly\\Downloads\\EUREKABANK_REST_DOTNET_G4\\02. CLIENTEESCRITORIO\\EurekabankEscritorioCliente\\EurekabankEscritorioCliente\\LoginForm.cs",
+              "RelativeToolTip": "EurekabankEscritorioCliente\\LoginForm.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAgwEYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T05:34:49.517Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

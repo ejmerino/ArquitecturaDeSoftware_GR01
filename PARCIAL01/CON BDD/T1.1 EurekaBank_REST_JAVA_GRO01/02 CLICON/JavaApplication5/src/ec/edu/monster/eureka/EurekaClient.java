@@ -27,7 +27,7 @@ public class EurekaClient {
 
     private WebTarget webTarget;
     private Client client;
-    private static final String BASE_URI = "http://localhost:8080/WSEurekaBank_GRO01/webresources";
+    private static final String BASE_URI = "http://10.40.31.127:8080/WSEurekaBank_GRO01/webresources";
 
     public EurekaClient() {
         client = javax.ws.rs.client.ClientBuilder.newClient();

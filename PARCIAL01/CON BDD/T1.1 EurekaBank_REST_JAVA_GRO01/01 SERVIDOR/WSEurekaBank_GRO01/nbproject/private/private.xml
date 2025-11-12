@@ -3,10 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Arquitectura-De-Software/Unidad%201/T1.1%20CON%20BD/TI1.1%20REST_JAVA_GR01/01%20SERVIDOR/WSEurekaBank_GRO01/src/java/ec/edu/monster/prueba/PruebaDeposito.java</file>
-            <file>file:/D:/Arquitectura-De-Software/Unidad%201/T1.1%20CON%20BD/TI1.1%20REST_JAVA_GR01/01%20SERVIDOR/WSEurekaBank_GRO01/src/java/ec/edu/monster/ws/ApplicationConfig.java</file>
-            <file>file:/D:/Arquitectura-De-Software/Unidad%201/T1.1%20CON%20BD/TI1.1%20REST_JAVA_GR01/01%20SERVIDOR/WSEurekaBank_GRO01/src/java/ec/edu/monster/servicio/EurekaService.java</file>
-            <file>file:/D:/Arquitectura-De-Software/Unidad%201/T1.1%20CON%20BD/TI1.1%20REST_JAVA_GR01/01%20SERVIDOR/WSEurekaBank_GRO01/src/java/ec/edu/monster/ws/CoreBancarioResource.java</file>
+            <file>file:/D:/Josue/GitHub%20Personal/ArquitecturaDeSoftware_GR01/PARCIAL01/CON%20BDD/T1.1%20EurekaBank_REST_JAVA_GRO01/01%20SERVIDOR/WSEurekaBank_GRO01/src/java/ec/edu/monster/servicio/EurekaService.java</file>
+            <file>file:/D:/Josue/GitHub%20Personal/ArquitecturaDeSoftware_GR01/PARCIAL01/CON%20BDD/T1.1%20EurekaBank_REST_JAVA_GRO01/01%20SERVIDOR/WSEurekaBank_GRO01/src/java/ec/edu/monster/prueba/PruebaDeposito.java</file>
+            <file>file:/D:/Josue/GitHub%20Personal/ArquitecturaDeSoftware_GR01/PARCIAL01/CON%20BDD/T1.1%20EurekaBank_REST_JAVA_GRO01/01%20SERVIDOR/WSEurekaBank_GRO01/src/java/ec/edu/monster/db/AccesoDB.java</file>
+            <file>file:/D:/Josue/GitHub%20Personal/ArquitecturaDeSoftware_GR01/PARCIAL01/CON%20BDD/T1.1%20EurekaBank_REST_JAVA_GRO01/01%20SERVIDOR/WSEurekaBank_GRO01/web/WEB-INF/web.xml</file>
+            <file>file:/D:/Josue/GitHub%20Personal/ArquitecturaDeSoftware_GR01/PARCIAL01/CON%20BDD/T1.1%20EurekaBank_REST_JAVA_GRO01/01%20SERVIDOR/WSEurekaBank_GRO01/src/java/ec/edu/monster/prueba/PruebaConexionDB.java</file>
+            <file>file:/D:/Josue/GitHub%20Personal/ArquitecturaDeSoftware_GR01/PARCIAL01/CON%20BDD/T1.1%20EurekaBank_REST_JAVA_GRO01/01%20SERVIDOR/WSEurekaBank_GRO01/web/index.html</file>
         </group>
     </open-files>
 </project-private>

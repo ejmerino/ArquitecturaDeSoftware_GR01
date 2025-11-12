@@ -17,7 +17,7 @@ public class EurekaApiClient {
 
     // ⚠️ Cambia host/IP si tu API REST está en otra máquina
     private static final String BASE =
-        "http://localhost:8080/WSEurekaBank_GRO01/webresources/coreBancario";
+        "http://10.40.31.127:8080/WSEurekaBank_GRO01/webresources/coreBancario";
 
     private final Gson gson = new Gson();
 

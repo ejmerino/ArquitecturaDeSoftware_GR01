@@ -13,7 +13,7 @@ import java.util.List;
 public class EurekaService {
 
     private static final String BASE =
-            "http://localhost:8080/WSEurekaBank_GRO01/webresources/coreBancario";
+            "http://10.40.31.127:8080/WSEurekaBank_GRO01/webresources/coreBancario";
     private final Gson gson = new Gson();
 
     public List<Movimiento> traerMovimientos(String cuenta) throws Exception {

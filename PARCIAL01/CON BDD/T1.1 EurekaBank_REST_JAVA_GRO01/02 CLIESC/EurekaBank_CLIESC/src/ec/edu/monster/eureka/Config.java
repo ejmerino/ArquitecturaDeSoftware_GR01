@@ -2,7 +2,7 @@ package ec.edu.monster.eureka;
 
 public final class Config {
     // ⚠️ Ajusta si tu WAR/host/puerto son distintos
-    public static final String HOST = "localhost";
+    public static final String HOST = "10.40.31.127";
     public static final int    PORT = 8080;
     public static final String APP_CONTEXT = "WSEurekaBank_GRO01";
 
