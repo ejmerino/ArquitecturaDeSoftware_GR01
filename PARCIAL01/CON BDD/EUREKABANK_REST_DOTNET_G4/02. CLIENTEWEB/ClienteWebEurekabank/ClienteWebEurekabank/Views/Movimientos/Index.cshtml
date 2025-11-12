@@ -1,0 +1,115 @@
+﻿@model List<ClienteWebEurekabank.Models.Movimiento>
+
+@{
+    ViewData["Title"] = "Movimientos";
+}
+
+<h2 class="text-center mt-4">📜 Movimientos de la Cuenta</h2>
+
+<div class="container mt-4">
+
+    @if (ViewBag.Flash != null)
+    {
+        <div class="alert alert-success text-center">
+            @ViewBag.Flash
+        </div>
+    }
+
+    <form method="get" asp-action="Index" class="row mb-4">
+        <div class="col-md-8">
+            <input type="text" name="numeroCuenta" value="@ViewBag.NumeroCuenta"
+                   class="form-control" placeholder="Ingrese número de cuenta..." required />
+        </div>
+        <div class="col-md-4 text-end">
+            <button type="submit" class="btn btn-primary">Buscar Movimientos</button>
+        </div>
+    </form>
+
+    @if (Model != null && Model.Any())
+    {
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark text-center">
+                <tr>
+                    <th>ID</th>
+                    <th>Fecha</th>
+                    <th>Tipo</th>
+                    <th>Valor (USD)</th>
+                    <th>Saldo Final (USD)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var mov in Model)
+                {
+                    <tr>
+                        <td class="text-center">@mov.MovId</td>
+
+                        <td>
+                            @{
+                                // Formateo seguro de fecha
+                                var movFechaStr = Convert.ToString(mov.MovFecha);
+                                string fechaTxt;
+                                if (DateTime.TryParse(movFechaStr, out var dt))
+                                {
+                                    fechaTxt = dt.ToString("dd/MM/yyyy HH:mm");
+                                }
+                                else
+                                {
+                                    fechaTxt = movFechaStr ?? "";
+                                }
+                            }
+                            @fechaTxt
+                        </td>
+
+                        <td class="text-center">@Convert.ToString(mov.MovTipo)</td>
+
+                        <td class="text-end">
+                            @{
+                                // Formateo seguro de monto
+                                var movValorStr = Convert.ToString(mov.MovValor);
+                                string valorTxt;
+                                if (decimal.TryParse(movValorStr, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out var valDec))
+                                {
+                                    valorTxt = valDec.ToString("N2");
+                                }
+                                else
+                                {
+                                    valorTxt = movValorStr ?? "";
+                                }
+                            }
+                            @valorTxt
+                        </td>
+
+                        <td class="text-end">
+                            @{
+                                // Formateo seguro de saldo final
+                                var movSaldoStr = Convert.ToString(mov.MovSaldoFinal);
+                                string saldoTxt;
+                                if (decimal.TryParse(movSaldoStr, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out var saldoDec))
+                                {
+                                    saldoTxt = saldoDec.ToString("N2");
+                                }
+                                else
+                                {
+                                    saldoTxt = movSaldoStr ?? "";
+                                }
+                            }
+                            @saldoTxt
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <div class="alert alert-info text-center">
+            No hay movimientos registrados para esta cuenta.
+        </div>
+    }
+
+    <div class="text-center mt-3">
+        <a href="@Url.Action("Deposito", "Movimientos", new { numeroCuenta = ViewBag.NumeroCuenta })" class="btn btn-success m-2">💰 Realizar Depósito</a>
+        <a href="@Url.Action("Retiro", "Movimientos", new { numeroCuenta = ViewBag.NumeroCuenta })" class="btn btn-warning m-2">💸 Realizar Retiro</a>
+        <a href="@Url.Action("Index", "Menu")" class="btn btn-secondary m-2">⬅️ Volver al Menú</a>
+    </div>
+</div>

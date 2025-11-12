@@ -1,0 +1,119 @@
+﻿@{
+    ViewData["Title"] = "Registro de Usuario";
+}
+
+<style>
+    .register-container {
+        max-width: 500px;
+        margin: 20px auto;
+        padding: 30px;
+        border: 1px solid #ccc; /* Contorno gris claro */
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        background-color: #f9f9f9; /* Fondo gris claro */
+        color: #333; /* Texto gris oscuro */
+    }
+
+    .register-form {
+        margin-top: 20px;
+    }
+
+    .form-control {
+        border-radius: 4px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 10px;
+    }
+
+    .btn-custom {
+        background-color: #007bff; /* Azul claro */
+        border: none;
+        color: #fff; /* Texto blanco */
+        font-weight: normal;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        margin-top: 20px; /* Espacio adicional arriba del botón */
+        width: 100%; /* Botones a lo ancho del contenedor */
+    }
+
+        .btn-custom:hover {
+            background-color: #0056b3; /* Azul más oscuro para el hover */
+            color: #fff; /* Texto blanco al hacer hover */
+        }
+
+    .btn-secondary {
+        background-color: #6c757d; /* Color de fondo gris para el botón de volver al inicio */
+        border: none; /* Sin borde */
+        color: #fff; /* Texto blanco */
+        font-weight: normal;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        margin-top: 10px; /* Espacio adicional arriba del botón */
+        width: 100%; /* Botones a lo ancho del contenedor */
+    }
+
+        .btn-secondary:hover {
+            background-color: #5a6268; /* Gris más oscuro para el hover */
+            color: #fff; /* Texto blanco al hacer hover */
+        }
+</style>
+
+<div class="register-container">
+    <h1 class="text-center">Registro de Usuario</h1>
+
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <div class="alert alert-danger">
+            @ViewBag.ErrorMessage
+        </div>
+    }
+
+    @if (ViewBag.SuccessMessage != null)
+    {
+        <div class="alert alert-success">
+            @ViewBag.SuccessMessage
+        </div>
+    }
+
+    <form method="post" action="@Url.Action("Register", "Home")" class="register-form">
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required />
+        </div>
+        <div class="form-group">
+            <label for="apellido">Apellido:</label>
+            <input type="text" class="form-control" id="apellido" name="apellido" required />
+        </div>
+        <div class="form-group">
+            <label for="correo">Correo:</label>
+            <input type="email" class="form-control" id="correo" name="correo" required />
+        </div>
+        <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="text" class="form-control" id="telefono" name="telefono" required />
+        </div>
+        <div class="form-group">
+            <label for="cedula">Cédula:</label>
+            <input type="text" class="form-control" id="cedula" name="cedula" required />
+        </div>
+        <div class="form-group">
+            <label for="rol">Rol:</label>
+            <select class="form-control" id="rol" name="rol" required>
+                <option value="Administrador">Administrador</option>
+                <option value="Usuario">Usuario</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" class="form-control" id="contrasena" name="contrasena" required />
+        </div>
+        <button type="submit" class="btn btn-custom btn-block">Registrar</button>
+        <a href="@Url.Action("Index", "Home")" class="btn btn-secondary btn-block">Volver al Inicio</a>
+    </form>
+</div>

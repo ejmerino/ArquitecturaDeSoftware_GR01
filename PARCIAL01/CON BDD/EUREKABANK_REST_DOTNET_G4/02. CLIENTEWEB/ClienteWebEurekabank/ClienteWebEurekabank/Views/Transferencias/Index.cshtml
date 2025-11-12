@@ -1,0 +1,131 @@
+﻿@model ClienteWebEurekabank.Models.TransferenciaModel
+
+@{
+    ViewData["Title"] = "💸 Realizar Transferencia";
+}
+
+<style>
+    :root {
+        --azul: #0033A0;
+        --azul-osc: #001f66;
+        --amarillo: #FFD700;
+        --gris: #f5f7fa;
+    }
+
+    body {
+        background-color: var(--gris);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h2 {
+        color: var(--azul);
+        text-align: center;
+        font-weight: 700;
+        margin-top: 30px;
+    }
+
+    .transfer-container {
+        max-width: 600px;
+        margin: 30px auto;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        border-top: 6px solid var(--amarillo);
+    }
+
+    .form-label {
+        font-weight: 600;
+        color: var(--azul);
+    }
+
+    .form-control {
+        border: 2px solid var(--azul);
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .btn-transferir {
+        background-color: var(--azul);
+        border: 2px solid var(--amarillo);
+        color: var(--amarillo);
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        width: 100%;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+        .btn-transferir:hover {
+            background-color: var(--azul-osc);
+            color: #fff;
+        }
+
+    .alert {
+        max-width: 600px;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .btn-back {
+        background-color: var(--azul);
+        color: var(--amarillo);
+        border: 2px solid var(--amarillo);
+        font-weight: 600;
+        padding: 10px 25px;
+        border-radius: 6px;
+        text-decoration: none;
+        display: inline-block;
+        transition: 0.3s;
+        margin-top: 20px;
+    }
+
+        .btn-back:hover {
+            background-color: var(--azul-osc);
+            color: #fff;
+        }
+</style>
+
+<h2>💸 Realizar Transferencia</h2>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger">
+        <strong>Error:</strong> @ViewBag.ErrorMessage
+    </div>
+}
+
+<div class="transfer-container">
+    <form method="post" asp-action="Transferencia">
+        <div class="mb-3">
+            <label for="CuentaOrigen" class="form-label">Cuenta Origen:</label>
+            <input type="text" class="form-control" id="CuentaOrigen" name="CuentaOrigen" placeholder="Ej: 0000200001" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="CuentaDestino" class="form-label">Cuenta Destino:</label>
+            <input type="text" class="form-control" id="CuentaDestino" name="CuentaDestino" placeholder="Ej: 0000200002" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="Valor" class="form-label">Valor a Transferir (USD):</label>
+            <input type="number" step="0.01" min="0.01" class="form-control" id="Valor" name="Valor" placeholder="Ej: 150.00" required />
+        </div>
+
+        <button type="submit" class="btn-transferir">Transferir</button>
+    </form>
+</div>
+
+@if (ViewBag.Result != null)
+{
+    <div class="alert alert-success">
+        <strong>✅ Éxito:</strong> @ViewBag.Result
+    </div>
+}
+
+<div class="text-center">
+    <a class="btn-back" href="@Url.Action("Index", "Menu")">⬅️ Volver al Menú</a>
+</div>

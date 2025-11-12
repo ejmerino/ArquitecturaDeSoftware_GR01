@@ -1,0 +1,38 @@
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\bin\Release\net6.0\appsettings.Development.json
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\bin\Release\net6.0\appsettings.json
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\bin\Release\net6.0\Eurekabank_Dotnet RestFul_G6.exe
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\bin\Release\net6.0\Eurekabank_Dotnet RestFul_G6.deps.json
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\bin\Release\net6.0\Eurekabank_Dotnet RestFul_G6.runtimeconfig.json
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\bin\Release\net6.0\Eurekabank_Dotnet RestFul_G6.dll
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\bin\Release\net6.0\Eurekabank_Dotnet RestFul_G6.pdb
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\bin\Release\net6.0\Microsoft.OpenApi.dll
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\bin\Release\net6.0\System.Data.SqlClient.dll
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\bin\Release\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\bin\Release\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\bin\Release\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\bin\Release\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\obj\Release\net6.0\Eurekabank_Dotnet RestFul_G6.csproj.AssemblyReference.cache
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\obj\Release\net6.0\Eurekabank_Dotnet RestFul_G6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\obj\Release\net6.0\Eurekabank_Dotnet RestFul_G6.AssemblyInfoInputs.cache
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\obj\Release\net6.0\Eurekabank_Dotnet RestFul_G6.AssemblyInfo.cs
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\obj\Release\net6.0\Eurekabank_Dotnet RestFul_G6.csproj.CoreCompileInputs.cache
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\obj\Release\net6.0\Eurekabank_Dotnet RestFul_G6.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\obj\Release\net6.0\Eurekabank_Dotnet RestFul_G6.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\obj\Release\net6.0\staticwebassets.build.json
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\obj\Release\net6.0\staticwebassets.development.json
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\obj\Release\net6.0\staticwebassets\msbuild.Eurekabank_Dotnet RestFul_G6.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\obj\Release\net6.0\staticwebassets\msbuild.build.Eurekabank_Dotnet RestFul_G6.props
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\obj\Release\net6.0\staticwebassets\msbuild.buildMultiTargeting.Eurekabank_Dotnet RestFul_G6.props
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.Eurekabank_Dotnet RestFul_G6.props
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\obj\Release\net6.0\staticwebassets.pack.json
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\obj\Release\net6.0\scopedcss\bundle\Eurekabank_Dotnet RestFul_G6.styles.css
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\obj\Release\net6.0\Eurekaba.12A5F726.Up2Date
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\obj\Release\net6.0\Eurekabank_Dotnet RestFul_G6.dll
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\obj\Release\net6.0\refint\Eurekabank_Dotnet RestFul_G6.dll
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\obj\Release\net6.0\Eurekabank_Dotnet RestFul_G6.pdb
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\obj\Release\net6.0\Eurekabank_Dotnet RestFul_G6.genruntimeconfig.cache
+C:\Users\pauls\OneDrive\Escritorio\EUREKABANK_REST_G4\01. SERVIDOR\Eurekabank_Dotnet RestFul_G6\obj\Release\net6.0\ref\Eurekabank_Dotnet RestFul_G6.dll

@@ -1,0 +1,90 @@
+﻿@{
+    ViewData["Title"] = "Inicio de Sesión";
+}
+
+<style>
+    .login-container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 30px;
+        border: 1px solid #ccc; /* Contorno gris claro */
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        background-color: #f9f9f9; /* Fondo gris claro */
+        color: #333; /* Texto gris oscuro */
+    }
+
+    .login-logo {
+        display: block;
+        margin: 0 auto 20px;
+        width: 150px; /* Tamaño del logo */
+        height: auto; /* Mantiene la proporción original del logo */
+    }
+
+    .login-form {
+        margin-top: 20px;
+    }
+
+    .form-control {
+        border-radius: 5px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .btn-custom {
+        background-color: #007bff; /* Azul claro */
+        border: none;
+        color: #fff; /* Texto blanco */
+        font-weight: normal;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        margin-top: 20px; /* Espacio adicional arriba del botón */
+        width: 100%;
+    }
+
+        .btn-custom:hover {
+            background-color: #0056b3; /* Azul más oscuro para el hover */
+            color: #fff; /* Texto blanco al hacer hover */
+        }
+
+    .register-link {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        color: #007bff; /* Azul claro */
+        text-decoration: none;
+    }
+
+        .register-link:hover {
+            text-decoration: underline;
+        }
+</style>
+
+<div class="login-container">
+    <img src="~/images/logo.png" alt="Logo" class="login-logo" />
+    <h2 class="text-center">Inicio de Sesión</h2>
+
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <div class="alert alert-danger">
+            @ViewBag.ErrorMessage
+        </div>
+    }
+
+    <form method="post" action="@Url.Action("Login", "Home")" class="login-form">
+        <div class="form-group">
+            <label for="username">Usuario:</label>
+            <input type="text" class="form-control" id="username" name="username" required />
+        </div>
+        <div class="form-group">
+            <label for="password">Contraseña:</label>
+            <input type="password" class="form-control" id="password" name="password" required />
+        </div>
+        <button type="submit" class="btn btn-custom btn-block">Iniciar sesión</button>
+    </form>
+    <a href="@Url.Action("Register", "Home")" class="register-link">Registrar nuevo usuario</a>
+</div>

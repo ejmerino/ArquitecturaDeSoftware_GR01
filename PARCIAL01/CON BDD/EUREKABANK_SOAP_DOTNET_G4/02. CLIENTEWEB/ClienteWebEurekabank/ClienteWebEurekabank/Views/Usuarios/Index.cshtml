@@ -1,0 +1,89 @@
+﻿@model ClienteWebEurekabank.Models.UsuarioModel
+
+@{
+    ViewData["Title"] = "Detalles del Usuario";
+}
+
+<h2>Consultar Usuario por ID</h2>
+
+<form method="get" action="@Url.Action("Index", "Usuarios")">
+    <div class="form-group">
+        <label for="usuarioId">ID del Usuario</label>
+        <input type="number" class="form-control" id="usuarioId" name="id" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Consultar</button>
+</form>
+
+@if (Model != null && Model.UsuId > 0)
+{
+    <h2>Detalles del Usuario</h2>
+    <div>
+        <h4>Usuario</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                Nombre
+            </dt>
+            <dd class="col-sm-10">
+                @Model.UsuNombre
+            </dd>
+            <dt class="col-sm-2">
+                Apellido
+            </dt>
+            <dd class="col-sm-10">
+                @Model.UsuApellido
+            </dd>
+            <dt class="col-sm-2">
+                Cédula
+            </dt>
+            <dd class="col-sm-10">
+                @Model.UsuCedula
+            </dd>
+            <dt class="col-sm-2">
+                Rol
+            </dt>
+            <dd class="col-sm-10">
+                @Model.UsuRol
+            </dd>
+        </dl>
+    </div>
+
+    <h2>Editar Usuario</h2>
+    <form asp-action="Edit" method="post">
+        <div class="form-group">
+            <label for="usuNombre">Nombre</label>
+            <input type="text" class="form-control" id="usuNombre" name="UsuNombre" value="@Model.UsuNombre" required />
+        </div>
+        <div class="form-group">
+            <label for="usuApellido">Apellido</label>
+            <input type="text" class="form-control" id="usuApellido" name="UsuApellido" value="@Model.UsuApellido" required />
+        </div>
+        <div class="form-group">
+            <label for="usuCorreo">Correo</label>
+            <input type="email" class="form-control" id="usuCorreo" name="UsuCorreo" value="@Model.UsuCorreo" required />
+        </div>
+        <div class="form-group">
+            <label for="usuTelefono">Teléfono</label>
+            <input type="text" class="form-control" id="usuTelefono" name="UsuTelefono" value="@Model.UsuTelefono" required />
+        </div>
+        <div class="form-group">
+            <label for="usuCedula">Cédula</label>
+            <input type="text" class="form-control" id="usuCedula" name="UsuCedula" value="@Model.UsuCedula" required />
+        </div>
+        <div class="form-group">
+            <label for="usuRol">Rol</label>
+            <select class="form-control" id="usuRol" name="UsuRol" required>
+                <option value="Administrador">Administrador</option>
+                <option value="Usuario">Usuario</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="usuContrasena">Contraseña</label>
+            <input type="password" class="form-control" id="usuContrasena" name="UsuContrasena" />
+        </div>
+        <input type="hidden" name="UsuId" value="@Model.UsuId" />
+        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+    </form>
+
+    <a class="btn btn-primary" href="@Url.Action("Index", "Menu")">Regresar</a>
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7YDKqqt9dkix2AVMJ9IwsQAAAAACAAAAAAAQZgAAAAEAACAAAADZsGWuRMVHrZ5QP2fsFntZcQgjIKw97XqYEt0kgt65mQAAAAAOgAAAAAIAACAAAABEaFVVG3qrIqgbB2V96MKcjUIdHO9S47ejHf6nqpF7xiAAAAAWLK1venvJBIutyoegYK1U6yvcpPcPfV5xxXt1oVxb9UAAAAB78+EAcyfWY3M+58036U+/kxkGrNc55CmLGQTJEQPSjGFuV5UjOaGdzR+UcBOnDGT9fLrcN0Eoss5jQfMy6Unw</EncryptedPassword>
+    <History>False|2024-07-22T04:28:10.1587356Z;False|2024-07-21T23:26:37.3398716-05:00;False|2024-07-21T23:17:00.4732320-05:00;False|2024-07-21T23:16:32.0738483-05:00;False|2024-07-21T23:13:53.9239328-05:00;False|2024-07-21T23:10:19.6285336-05:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="CadenaSQL">
+      <Value>Server=tcp:eurekabank.database.windows.net,1433%3bInitial Catalog=EurekaBank%3bPersist Security Info=False%3bUser ID=MasterMonster%3bPassword=Monster9%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

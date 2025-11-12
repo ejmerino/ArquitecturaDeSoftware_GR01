@@ -1,0 +1,235 @@
+﻿@{
+    ViewData["Title"] = "Menú Principal";
+    var userName = User?.Identity?.IsAuthenticated == true ? User.Identity.Name : "Usuario";
+}
+
+<style>
+    /* Paleta */
+    :root {
+        --azul: #0033A0;
+        --azul-osc: #001f66;
+        --amarillo: #FFD700;
+        --gris: #f5f6fa;
+    }
+
+    body {
+        background: var(--gris);
+    }
+
+    .hero {
+        background: linear-gradient(135deg, var(--azul), var(--azul-osc));
+        color: #fff;
+        border-radius: 16px;
+        padding: 28px 24px;
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 10px 30px rgba(0,0,0,.15);
+        margin-bottom: 24px;
+    }
+
+    .hero__title {
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .hero__subtitle {
+        opacity: .9;
+        margin: 6px 0 0 0;
+    }
+
+    .hero__actions .btn {
+        border-width: 2px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+    }
+
+    .btn-outline-gold {
+        color: var(--amarillo);
+        border-color: var(--amarillo);
+        background: transparent;
+    }
+
+        .btn-outline-gold:hover {
+            color: #111;
+            background: var(--amarillo);
+        }
+
+    .quick-form {
+        background: #ffffff;
+        border-radius: 14px;
+        padding: 14px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,.06);
+        margin-top: 12px;
+    }
+
+    .grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .tile {
+        grid-column: span 3; /* 4 por fila en desktop */
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        background: #fff;
+        border-radius: 16px;
+        padding: 16px 18px;
+        border: 1px solid #e8e8ee;
+        box-shadow: 0 4px 14px rgba(0,0,0,.06);
+        transition: transform .15s ease, box-shadow .15s ease;
+        text-decoration: none;
+        color: inherit;
+    }
+
+        .tile:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0,0,0,.08);
+        }
+
+    .tile__icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--gris);
+        font-size: 22px;
+    }
+
+    .tile__title {
+        margin: 0;
+        font-weight: 700;
+    }
+
+    .tile__desc {
+        margin: 2px 0 0 0;
+        color: #6b7280;
+        font-size: .95rem;
+    }
+
+    .logout-area {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+    }
+
+    /* 🔧 Importante: en Razor se escribe @@media (se renderiza como  ) */
+    @@media (max-width: 991px) {
+        .grid
+
+    {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+        .hero img {
+            max-width: 200px;
+            margin: 0 auto;
+        }
+
+    }
+
+    @@media (max-width: 575px) {
+        .grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .tile {
+            grid-column: span 2;
+        }
+
+        .quick-form {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+</style>
+
+<div class="hero">
+    <div style="display:flex; gap:18px; align-items:center;">
+        <img src="~/images/welcome.png" alt="Bienvenida" style="max-width:140px; height:auto; border-radius:12px;">
+        <div>
+            <h2 class="hero__title">Hola, @userName 👋</h2>
+            <p class="hero__subtitle">Bienvenida a EurekaBank. ¿Qué deseas hacer hoy?</p>
+
+            <!-- Búsqueda rápida de movimientos -->
+            <form class="quick-form" method="get" action="@Url.Action("Index", "Movimientos")">
+                <input name="numeroCuenta" class="form-control" placeholder="Buscar movimientos por cuenta (ej. 0000200001)" />
+                <button type="submit" class="btn btn-outline-gold">Buscar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="hero__actions">
+        <form method="post" action="@Url.Action("Logout", "Home")" style="display:inline;">
+            <button type="submit" class="btn btn-outline-gold">Cerrar sesión</button>
+        </form>
+    </div>
+</div>
+
+<div class="grid">
+    <!-- Movimientos -->
+    <a class="tile" href="@Url.Action("Index", "Movimientos")">
+        <div class="tile__icon">📜</div>
+        <div>
+            <h5 class="tile__title">Movimientos</h5>
+            <p class="tile__desc">Consulta historial por cuenta.</p>
+        </div>
+    </a>
+
+    <!-- Cuentas -->
+    <a class="tile" href="@Url.Action("Index", "Cuentas")">
+        <div class="tile__icon">💼</div>
+        <div>
+            <h5 class="tile__title">Cuentas</h5>
+            <p class="tile__desc">Saldos y tipos de cuenta.</p>
+        </div>
+    </a>
+
+    <!-- Transferencias -->
+    <a class="tile" href="@Url.Action("Index", "Transferencias")">
+        <div class="tile__icon">🔁</div>
+        <div>
+            <h5 class="tile__title">Transferencias</h5>
+            <p class="tile__desc">Envía dinero entre cuentas.</p>
+        </div>
+    </a>
+
+    <!-- Depósito -->
+    <a class="tile" href="@Url.Action("Deposito", "Movimientos")">
+        <div class="tile__icon">💰</div>
+        <div>
+            <h5 class="tile__title">Depósito</h5>
+            <p class="tile__desc">Carga saldo en tu cuenta.</p>
+        </div>
+    </a>
+
+    <!-- Retiro -->
+    <a class="tile" href="@Url.Action("Retiro", "Movimientos")">
+        <div class="tile__icon">💸</div>
+        <div>
+            <h5 class="tile__title">Retiro</h5>
+            <p class="tile__desc">Retira efectivo disponible.</p>
+        </div>
+    </a>
+
+    <!-- Usuarios -->
+  
+</div>
+
+<div class="logout-area">
+    <small class="text-muted">Sesión iniciada como <strong>@userName</strong></small>
+</div>

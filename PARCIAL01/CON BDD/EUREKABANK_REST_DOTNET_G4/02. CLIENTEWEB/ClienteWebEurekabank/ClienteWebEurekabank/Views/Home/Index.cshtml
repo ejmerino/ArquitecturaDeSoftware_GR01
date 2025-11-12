@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Inicio de Sesión";
+}
+
+<style>
+    .login-container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 2px solid #FFD700; /* Contorno amarillo */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        background-color: #0033A0; /* Fondo azul oscuro */
+        color: #fff;
+    }
+
+    .login-logo {
+        display: block;
+        margin: 0 auto 20px;
+        width: 250px;
+        height: auto;
+    }
+
+    .login-form {
+        margin-top: 20px;
+    }
+
+    .form-control {
+        border-radius: 4px;
+        background-color: #e6e6e6;
+        border: 1px solid #ddd;
+    }
+
+    .btn-custom {
+        background-color: #0033A0;
+        border: 2px solid #FFD700;
+        color: #FFD700;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 4px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        margin-top: 20px;
+    }
+
+        .btn-custom:hover {
+            background-color: #002080;
+            border-color: #FFD700;
+            color: #fff;
+        }
+</style>
+
+<div class="login-container">
+    <img src="~/images/logo.png" alt="Logo" class="login-logo" />
+    <h1 class="text-center">Inicio de Sesión</h1>
+
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <div class="alert alert-danger">
+            @ViewBag.ErrorMessage
+        </div>
+    }
+
+    <form method="post" action="@Url.Action("Login", "Home")" class="login-form">
+        <div class="form-group">
+            <label for="username">Nombre de Usuario:</label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Ingrese su nombre de usuario" required />
+        </div>
+
+        <div class="form-group">
+            <label for="password">Contraseña:</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Ingrese su contraseña" required />
+        </div>
+
+        <button type="submit" class="btn btn-custom w-100">Iniciar sesión</button>
+    </form>
+
+    <div class="text-center mt-3">
+        <a href="@Url.Action("Register", "Home")" class="btn btn-custom">Registrar nuevo usuario</a>
+    </div>
+</div>
